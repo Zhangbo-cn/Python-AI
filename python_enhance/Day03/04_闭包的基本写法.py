@@ -41,3 +41,12 @@ def fn_outer(num1):
 res = fn_outer(5) # 5 -> num1
 res(10) # 10 -> num2
 
+
+def outer(num1):
+    def inner(num2):
+        sum = num1 + num2
+        print(f'两数之和：{sum}')
+    return inner
+
+f = outer(5)
+print(f)
